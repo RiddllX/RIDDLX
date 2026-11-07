@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riddlx</title>
+<style>
+body {
+  background: #101116;
+  color: white;
+  font-family: Arial;
+  padding: 18px;
+}
+h1 { color: #61d9ff; }
+.panel {
+  background: #1c1e27;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+button {
+  background: #242b3a;
+  color: white;
+  border: 1px solid #61d9ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 5px;
+}
+textarea {
+  width: 95%;
+  height: 220px;
+  background: #090a0e;
+  color: #61d9ff;
+  padding: 10px;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+<h1>Riddlx</h1>
+<p>Your Lua workspace</p>
+
+<div class="panel">
+  <h3>AI Assistant</h3>
+  <button>ChatGPT</button>
+  <button>Gemini</button>
+</div>
+
+<div class="panel">
+  <h3>Script Editor</h3>
+  <textarea placeholder="Write Lua code here..."></textarea>
+  <br>
+  <button>Clear</button>
+  <button>Save</button>
+</div>
+
+<div class="panel">
+  <h3>Riddlx AI</h3>
+  <p>Ask me about Steal a Brainrot!</p>
+</div>
+</body>
+</html>
