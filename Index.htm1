@@ -1,0 +1,75 @@
+--[[
+    RiddllX AI v1.0
+    Black + Neon Blue
+]]
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "RiddllX"
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local main = Instance.new("Frame")
+main.Size = UDim2.new(0, 300, 0, 260)
+main.Position = UDim2.new(0.5, -150, 0.5, -130)
+main.BackgroundColor3 = Color3.fromRGB(10, 12, 20)
+main.Parent = gui
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 12)
+corner.Parent = main
+
+local outline = Instance.new("UIStroke")
+outline.Color = Color3.fromRGB(0, 140, 255)
+outline.Thickness = 2
+outline.Parent = main
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 45)
+title.BackgroundTransparency = 1
+title.Text = "RiddllX AI"
+title.TextColor3 = Color3.fromRGB(0, 160, 255)
+title.TextSize = 23
+title.Font = Enum.Font.GothamBold
+title.Parent = main
+
+local input = Instance.new("TextBox")
+input.Size = UDim2.new(1, -24, 0, 65)
+input.Position = UDim2.new(0, 12, 0, 55)
+input.PlaceholderText = "Enter your riddle..."
+input.Text = ""
+input.TextWrapped = true
+input.ClearTextOnFocus = false
+input.BackgroundColor3 = Color3.fromRGB(25, 30, 42)
+input.TextColor3 = Color3.new(1, 1, 1)
+input.Parent = main
+
+local answer = Instance.new("TextBox")
+answer.Size = UDim2.new(1, -24, 0, 55)
+answer.Position = UDim2.new(0, 12, 0, 135)
+answer.PlaceholderText = "AI answer appears here..."
+answer.Text = ""
+answer.TextWrapped = true
+answer.ClearTextOnFocus = false
+answer.BackgroundColor3 = Color3.fromRGB(25, 30, 42)
+answer.TextColor3 = Color3.new(1, 1, 1)
+answer.Parent = main
+
+local solve = Instance.new("TextButton")
+solve.Size = UDim2.new(1, -24, 0, 38)
+solve.Position = UDim2.new(0, 12, 0, 205)
+solve.Text = "AI SOLVE"
+solve.TextColor3 = Color3.new(1, 1, 1)
+solve.BackgroundColor3 = Color3.fromRGB(0, 110, 230)
+solve.Font = Enum.Font.GothamBold
+solve.Parent = main
+
+solve.MouseButton1Click:Connect(function()
+    if input.Text == "" then
+        answer.Text = "Please enter a riddle!"
+    else
+        answer.Text = "AI connection coming next..."
+    end
+end)
